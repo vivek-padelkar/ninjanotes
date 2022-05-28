@@ -16,7 +16,7 @@ const Login = () => {
                         <p>Login</p><span><input type='text' /></span>
                         <p>Password</p><span><input type='password' /></span>
                         <LoginButton>Login</LoginButton>
-                        <span><CreateeAccount>or create an account ?</CreateeAccount></span>
+                        <span><CreateeAccount className='fromLeft'>or create an account ?</CreateeAccount></span>
                     </LoginCotainer>
                 </form>
             </LoginWrapper>

@@ -20,3 +20,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.appContainer {
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.screen {
+  flex: 8;
+}

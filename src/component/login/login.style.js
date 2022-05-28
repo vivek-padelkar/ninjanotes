@@ -25,26 +25,34 @@ h1 {
     color: ${headline};
 }
 
-@media  (max-width: 600px) {
+
+@media  (max-width: 800px) {
     width:90vw;
+    h1 {
+        font-size:30px;
+    }
 }
 `
 export const LoginCotainer = styled.div`
-
+display: flex;
+flex-direction:column;
+/* align-items:center; */
+justify-content:center;
 p {
     color:${paragraph};
     margin:15px 0;
     font-weight:600;
 }
 input{
-    height:10%;
-    width:100%;
-    padding:15px;
+    /* width:80%; */
+    padding:10px;
+    border:none;
+    border:1px solid black;
 }
 
-@media  (max-width: 600px) {
+@media  (max-width: 800px) {
     p {
-         margin:10px 0;
+         margin:5px 0;
     }
     input {
         padding:5px;
@@ -61,15 +69,16 @@ img {
     width:100%;
     height:100%;
 }
+
 `
 export const LoginButton = styled.button`
     background-color: ${bgYello};
     color: ${headline};
-    width:100%;
+    /* width:100%; */
     margin-top:20px;
     height:70%;
     border:none;
-    padding:20px;
+    padding:15px;
     font-weight:600;
     cursor:pointer;
     font-size:1rem;
@@ -77,16 +86,35 @@ export const LoginButton = styled.button`
     :hover {
         background-color:#ffcc00;
     }
+
+    @media  (max-width: 800px) {
+     padding:10px;
+     font-size:16px;
+    }
 `
 
 export const CreateeAccount = styled.p`
-
-
+position: relative;
+  /* display: inline-block; */
 text-align:center;
 transition: all 250ms ease-in;
 cursor:pointer;
-:hover {
-    border-bottom: 1px solid black;
+
+::after {
+	/* position: absolute; */
+    /* left:50%; */
+    display:block;
+    width:0;
+    bottom:0;
+	content: '';
+	height: 2px;
+    background: ${bgYello};
+    font-weight:600;
+    transition: all .1s ease-in-out;
+}
+:hover:after {
+  width: 100%;
+  /* margin-left: 200px; */
 }
 `
 
